@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "caixas",
     "receitas",
     "despesas",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [

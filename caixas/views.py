@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
+from .models import Caixa
+from.serializers import CaixaSerializer
 
-# Create your views here.
+
+class CaixaView(ListCreateAPIView):
+ 
+ queryset= Caixa.objects.all()
+ serializer_class= CaixaSerializer
+
+class CaixaDetailView(RetrieveUpdateDestroyAPIView):
+  
+  queryset= Caixa.objects.all()
+  serializer_class= CaixaSerializer
