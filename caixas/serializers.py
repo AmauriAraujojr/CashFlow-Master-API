@@ -8,6 +8,7 @@ class CaixaSerializer(serializers.ModelSerializer):
       
    receitas = ReceitaSerializer(read_only=True, many=True)
    despesas =DespesaSerializer(read_only=True, many=True)
+   total= serializers.DecimalField(max_digits = 8, decimal_places = 2,allow_null=True, default=None)
 
    def create(self, validated_data: dict) -> Caixa:
         
@@ -15,5 +16,5 @@ class CaixaSerializer(serializers.ModelSerializer):
      
    class Meta:
         model = Caixa
-        fields = ["id", "data", "despesas", "receitas"]
+        fields = ["id", "data", "despesas", "receitas","total"]
   
