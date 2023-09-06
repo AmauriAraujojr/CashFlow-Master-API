@@ -5,7 +5,7 @@ from.serializers import CaixaSerializer
 
 class CaixaView(ListCreateAPIView):
  
- queryset= Caixa.objects.all()
+ queryset= Caixa.objects.all().order_by("id")
  serializer_class= CaixaSerializer
 
 class CaixaDetailView(RetrieveUpdateDestroyAPIView):
