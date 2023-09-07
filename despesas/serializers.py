@@ -13,5 +13,5 @@ class DespesaSerializer(serializers.ModelSerializer):
    
    class Meta:
         model = Despesa
-        fields = ["id", "nome", "valor",]
+        fields = ["id", "nome", "valor","tipo"]
   
