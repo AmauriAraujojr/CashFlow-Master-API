@@ -7,6 +7,8 @@ class User(AbstractUser):
 
     nome_empresa = models.CharField(max_length=50)
 
+    avatar_empresa = models.TextField()
+
 
    
 
