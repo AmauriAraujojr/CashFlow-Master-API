@@ -176,7 +176,7 @@ SPECTACULAR_SETTINGS ={
 }
 CORS_ALLOWED_ORIGINS = [
 	'http://localhost:5173',
-     'https://caixa-pizzaria-react-ers1ug9br-amauriaraujojr.vercel.app'
+'https://caixa-pizzaria-react.vercel.app'
 ]
 
 AUTH_USER_MODEL = 'users.User'
