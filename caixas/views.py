@@ -24,12 +24,13 @@ class CaixaView(ListCreateAPIView):
  def get_queryset(self):
         user_id=self.kwargs.get("pk")
 
-        return Caixa.objects.filter(user= user_id)
+        return Caixa.objects.filter(user= user_id).order_by("id")
+
 
 
 class CaixaDetailView(RetrieveUpdateDestroyAPIView):
-   authentication_classes = [JWTAuthentication]
-   permission_classes = [IsAuthenticated, IsOwner]
+ 
    
    queryset= Caixa.objects.all()
    serializer_class= CaixaSerializer
+  
